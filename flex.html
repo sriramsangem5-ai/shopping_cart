@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Cpath d='M18 22h28v6H18zm0 8h28v6H18zm0 8h20v6H18z' fill='white'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <style>
+        
+
+        :root {
+            --bg: cadetblue;
+            --text: #0b1b2d;
+            --panel: #f7f9fb;
+            --accent: cornflowerblue;
+            --border: #1b1b1b;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .menu {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            border: 2px solid var(--border);
+            padding: 10px 25px;
+            margin: 5px;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .menu a.active {
+            background-color: #ffffff;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px 30px;
+        }
+
+        .item {
+            width: 200px;
+            border: 2px solid var(--border);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .item img {
+            width: 180px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .contact {
+            width: min(400px, 80vw);
+            border: 2px solid var(--border);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 10px;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #a9a9a9;
+            border-radius: 6px;
+        }
+
+        .contact textarea {
+            height: 100px;
+        }
+
+        .contact button {
+            padding: 10px 25px;
+            margin-top: 10px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ================= HOME PAGE ================= -->
+
+<div id="home" class="page active">
+
+    <h1>SHOPPING CART</h1>
+
+    <div class="menu">
+
+        <a href="#home" class="nav-link active">HOME</a>
+
+        <a href="#bikes" class="nav-link">BIKES</a>
+
+        <a href="#cars" class="nav-link">CARS</a>
+
+        <a href="#contact" class="nav-link">CONTACT US</a>
+
+    </div>
+
+    <h2 style="text-align:center;">
+        Welcome to Shopping Cart
+    </h2>
+
+    <p style="text-align:center;">
+        Select Cars, Bikes or Contact Us
+    </p>
+
+</div>
+
+
+
+
+<div id="bikes" class="page">
+
+    <h1>BIKE SHOPPING CART</h1>
+
+    <div class="menu">
+
+        <a href="#home" class="nav-link">HOME</a>
+
+        <a href="#bikes" class="nav-link active">BIKES</a>
+
+        <a href="#cars" class="nav-link">CARS</a>
+
+        <a href="#contact" class="nav-link">CONTACT US</a>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+            <img src="heroxtreme125r.jpeg" alt="Hero Xtreme 125R">
+            <p><b>Hero Xtreme 125R</b></p>
+            <p>₹1,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="hondacb350.jpeg" alt="Honda CB350">
+            <p><b>Honda CB350</b></p>
+            <p>₹2,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="hunter.jpeg" alt="Royal Enfield Hunter 350">
+            <p><b>Royal Enfield Hunter 350</b></p>
+            <p>₹1,50,000</p>
+        </div>
+
+        <div class="item">
+            <img src="ktmduke.jpeg" alt="KTM Duke 390">
+            <p><b>KTM Duke 390</b></p>
+            <p>₹3,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="tvsapache.jpeg" alt="TVS Apache RTR 200">
+            <p><b>TVS Apache RTR 200</b></p>
+            <p>₹1,50,000</p>
+        </div>
+
+        <div class="item">
+            <img src="yamaha.jpeg" alt="Yamaha MT-15">
+            <p><b>Yamaha MT-15</b></p>
+            <p>₹1,70,000</p>
+        </div>
+
+        <div class="item">
+            <img src="yamahar15.jpeg" alt="Yamaha R15 V4">
+            <p><b>Yamaha R15 V4</b></p>
+            <p>₹1,90,000</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="cars" class="page">
+
+    <h1>CAR SHOPPING CART</h1>
+
+    <div class="menu">
+
+        <a href="#home" class="nav-link">HOME</a>
+
+        <a href="#bikes" class="nav-link">BIKES</a>
+
+        <a href="#cars" class="nav-link active">CARS</a>
+
+        <a href="#contact" class="nav-link">CONTACT US</a>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.44 AM.jpeg" alt="Maruti Suzuki Swift">
+            <p><b>Maruti Suzuki Swift</b></p>
+            <p>₹8,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.45 AM.jpeg" alt="Mahindra Thar">
+            <p><b>Mahindra Thar</b></p>
+            <p>₹12,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.46 AM.jpeg" alt="Toyota Fortuner">
+            <p><b>Toyota Fortuner</b></p>
+            <p>₹35,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.44 AM.jpeg" alt="Tata Nexon">
+            <p><b>Tata Nexon</b></p>
+            <p>₹9,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.45 AM.jpeg" alt="Mahindra XUV700">
+            <p><b>Mahindra XUV700</b></p>
+            <p>₹15,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.46 AM.jpeg" alt="Hyundai Creta">
+            <p><b>Hyundai Creta</b></p>
+            <p>₹12,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.44 AM.jpeg" alt="Kia Seltos">
+            <p><b>Kia Seltos</b></p>
+            <p>₹11,00,000</p>
+        </div>
+
+        <div class="item">
+            <img src="WhatsApp Image 2026-09-18 at 10.48.45 AM.jpeg" alt="Tata Harrier">
+            <p><b>Tata Harrier</b></p>
+            <p>₹15,00,000</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="contact" class="page">
+
+    <h1>CONTACT US</h1>
+
+    <div class="menu">
+
+        <a href="#home" class="nav-link">HOME</a>
+
+        <a href="#bikes" class="nav-link">BIKES</a>
+
+        <a href="#cars" class="nav-link">CARS</a>
+
+        <a href="#contact" class="nav-link active">CONTACT US</a>
+
+    </div>
+
+
+    <div class="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <label>Name:</label>
+            <br>
+
+            <input type="text" placeholder="Enter your name">
+
+            <br>
+
+            <label>Email:</label>
+            <br>
+
+            <input type="email" placeholder="Enter your email">
+
+            <br>
+
+            <label>Phone:</label>
+            <br>
+
+            <input type="tel" placeholder="Enter your phone number">
+
+            <br>
+
+            <label>Message:</label>
+            <br>
+
+            <textarea placeholder="Enter your message"></textarea>
+
+            <br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    const pages = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function showPage(targetId) {
+        const id = targetId && targetId.startsWith('#') ? targetId.slice(1) : 'home';
+
+        pages.forEach((page) => {
+            page.classList.toggle('active', page.id === id);
+        });
+
+        navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', isActive);
+        });
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetHash = link.getAttribute('href');
+            history.pushState(null, '', targetHash);
+            showPage(targetHash);
+        });
+    });
+
+    window.addEventListener('popstate', () => {
+        showPage(window.location.hash || '#home');
+    });
+
+    showPage(window.location.hash || '#home');
+</script>
+
+</body>
+</html>
